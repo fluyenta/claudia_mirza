@@ -1234,6 +1234,280 @@ footer {
   cursor: pointer;
   font-weight: 300;
 }
+
+/* ═══════════════ TIMELINE ═══════════════ */
+.timeline-section {
+  background: var(--cream);
+  padding: 8rem 0;
+}
+
+.timeline-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.timeline-header { margin-bottom: 4rem; }
+
+.timeline-track {
+  position: relative;
+  padding: 1rem 0;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold) 5%, var(--gold) 95%, transparent);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.timeline-item.visible { opacity: 1; transform: translateY(0); }
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0.5rem;
+  width: 9px;
+  height: 9px;
+  background: var(--gold);
+  border-radius: 50%;
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 1px var(--gold);
+}
+
+.timeline-year {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.3rem;
+}
+
+.timeline-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-desc {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* ═══════════════ VENTURES ═══════════════ */
+.ventures-section { background: var(--warm-white); }
+
+.ventures-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.venture-card {
+  background: var(--cream);
+  border-radius: 2px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.venture-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+.venture-status {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.venture-status.active {
+  color: #2d6a4f;
+  background: rgba(45,106,79,0.08);
+  border: 1px solid rgba(45,106,79,0.2);
+}
+
+.venture-status.exited {
+  color: var(--gold-dark);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+.venture-name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.venture-role {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 1.2rem;
+}
+
+.venture-desc {
+  font-family: var(--font-accent);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.venture-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.venture-meta-item {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.venture-meta-value {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-dark);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* ═══════════════ LEADERSHIP ═══════════════ */
+.leadership-section { background: var(--warm-white); }
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.board-card {
+  padding: 1.8rem;
+  background: var(--cream);
+  border-left: 2px solid var(--gold);
+  border-radius: 0 2px 2px 0;
+  transition: all 0.3s;
+}
+
+.board-card:hover {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  transform: translateY(-3px);
+}
+
+.board-org {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.board-role {
+  font-size: 0.72rem;
+  color: var(--gold-dark);
+  font-weight: 500;
+}
+
+.board-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* ═══════════════ EDUCATION ROW ═══════════════ */
+.education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+
+.edu-item { flex: 1; min-width: 160px; }
+
+.edu-school {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+.edu-degree {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ═══════════════ PHILANTHROPY STRIP ═══════════════ */
+.philanthropy-strip {
+  background: var(--black);
+  padding: 5rem 4rem;
+  text-align: center;
+}
+
+.philanthropy-strip .section-label { color: var(--gold); margin-bottom: 1.5rem; }
+.philanthropy-strip .section-title { color: var(--cream); margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+.philanthropy-strip .section-desc { color: var(--text-light); max-width: 650px; margin: 0 auto; }
+
+/* ═══════════════ NEW SECTIONS RESPONSIVE ═══════════════ */
+@media (max-width: 1024px) {
+  .ventures-grid { grid-template-columns: 1fr 1fr; }
+  .leadership-grid { grid-template-columns: 1fr 1fr; }
+  .timeline-inner { padding: 0 2rem; }
+}
+
+@media (max-width: 768px) {
+  .ventures-grid { grid-template-columns: 1fr; }
+  .leadership-grid { grid-template-columns: 1fr; }
+  .education-row { gap: 1.5rem; }
+}
 </style>
 </head>
 <body>
@@ -1246,9 +1520,9 @@ footer {
   <a href="#" class="nav-logo">Claudia Mirza</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#publications">Publications</a></li>
+    <li><a href="#ventures">Ventures</a></li>
     <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#programs">Programs</a></li>
+    <li><a href="#leadership">Leadership</a></li>
     <li><a href="#awards">Awards</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1261,9 +1535,9 @@ footer {
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-menu-close" id="menuClose">&times;</button>
   <a href="#about" onclick="closeMobileMenu()">About</a>
-  <a href="#publications" onclick="closeMobileMenu()">Publications</a>
+  <a href="#ventures" onclick="closeMobileMenu()">Ventures</a>
   <a href="#speaking" onclick="closeMobileMenu()">Speaking</a>
-  <a href="#programs" onclick="closeMobileMenu()">Programs</a>
+  <a href="#leadership" onclick="closeMobileMenu()">Leadership</a>
   <a href="#awards" onclick="closeMobileMenu()">Awards</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
@@ -1306,8 +1580,8 @@ footer {
         <div class="about-image-border"></div>
         <div class="about-stats">
           <div class="reveal reveal-delay-1">
-            <div class="stat-number">20+</div>
-            <div class="stat-label">Years Leading</div>
+            <div class="stat-number">1,267%</div>
+            <div class="stat-label">Growth Rate</div>
           </div>
           <div class="reveal reveal-delay-2">
             <div class="stat-number">$55M</div>
@@ -1321,14 +1595,94 @@ footer {
       </div>
       <div>
         <p class="section-label reveal">About Claudia</p>
-        <h2 class="section-title reveal reveal-delay-1">An Immigrant's Journey<br>to <em>Extraordinary</em> Impact</h2>
+        <h2 class="section-title reveal reveal-delay-1">From Cartago<br>to the <em>World</em> Stage</h2>
         <div class="divider reveal reveal-delay-2"></div>
-        <p class="about-text reveal reveal-delay-2">Claudia Mirza grew up among agricultural workers in Colombia. Her first job in America was translating at a horse racetrack — a scrappy beginning that sparked something unstoppable. She immigrated at 20, earned dual business degrees, and went on to complete Harvard Business School's Owner/President Management Program.</p>
-        <p class="about-text reveal reveal-delay-3">She founded Akorbi and built it into a $55&nbsp;million global enterprise, alongside ventures like RunMyProcess. Invited to the White House by successive administrations, Claudia has been a leading voice for women-owned and minority businesses. Beyond the boardroom, she invests in communities and champions the advancement of women, working mothers, and children with special needs.</p>
+        <p class="about-text reveal reveal-delay-2">Claudia Mirza was born in Cartago, Colombia to agricultural workers. Her father left for the United States when she was four to work with thoroughbred horse trainers. She and her mother moved to Medell&iacute;n — into the projects, in cartel-controlled territory during the drug wars. Despite everything, her mother enrolled her in a prestigious Catholic school. That stubborn belief in education became Claudia's foundation. She arrived in America at 20, barely speaking English.</p>
+        <p class="about-text reveal reveal-delay-3">The 2002 dot-com crash cost her a corporate job at Genuity — and gave her a company. A mentor at the Greater Dallas Hispanic Chamber told her to stop job-hunting and start building. Akorbi became a $55&nbsp;million global enterprise with 700 employees across twelve countries, growing 1,267% in four years. In 2021 she acquired RunMyProcess from Fujitsu. In 2024 she exited Akorbi. Today she runs RunMyProcess and Mirza Holdings — an inventor with multiple patents pending who still believes the best businesses are built on human connection.</p>
+        <div class="education-row reveal reveal-delay-3">
+          <div class="edu-item">
+            <div class="edu-school">Harvard Business School</div>
+            <div class="edu-degree">OPM Program, Class 52</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">Tuck at Dartmouth</div>
+            <div class="edu-degree">WBENC Executive Program</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">SMU Cox School</div>
+            <div class="edu-degree">Executive Education</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-school">DeVry University</div>
+            <div class="edu-degree">B.S. Business Administration</div>
+          </div>
+        </div>
         <a href="#contact" class="btn-primary reveal reveal-delay-4">
           <span>Work With Claudia</span>
           <svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M10 0L8.6 1.4L12.2 5H0V7H12.2L8.6 10.6L10 12L16 6L10 0Z" fill="currentColor"/></svg>
         </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TIMELINE ═══════════════ -->
+<section class="timeline-section" id="timeline">
+  <div class="timeline-inner">
+    <div class="timeline-header">
+      <p class="section-label reveal">The Journey</p>
+      <h2 class="section-title reveal reveal-delay-1">A Life Built on<br><em>Resilience</em></h2>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-item">
+        <div class="timeline-year">Early Life</div>
+        <div class="timeline-title">Born in Cartago, Colombia</div>
+        <div class="timeline-desc">Daughter of agricultural workers. Her father left for the United States when she was four to train thoroughbred horses at racetracks.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Childhood</div>
+        <div class="timeline-title">Survived the Drug Wars in Medell&iacute;n</div>
+        <div class="timeline-desc">Grew up in the projects during cartel violence. Her mother enrolled her in a prestigious Catholic school against all odds.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">~1998</div>
+        <div class="timeline-title">Arrived in America</div>
+        <div class="timeline-desc">Immigrated at 20, barely speaking English. Earned a B.S. in Business Administration from DeVry while working multiple jobs.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2000</div>
+        <div class="timeline-title">Corporate Career at Genuity</div>
+        <div class="timeline-desc">Enterprise process improvement and project management at GTE Internetworking. Earned a full scholarship for her second business degree.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2002</div>
+        <div class="timeline-title">Founded Akorbi</div>
+        <div class="timeline-desc">The dot-com crash ended her corporate job. A mentor at the Greater Dallas Hispanic Chamber told her to build her own company instead.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2012 &ndash; 2016</div>
+        <div class="timeline-title">1,267% Revenue Growth</div>
+        <div class="timeline-desc">Akorbi grew into a $55M enterprise with 700+ employees across twelve countries. Named to Inc. 5000 and ranked among the fastest-growing LSPs globally.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2015 &ndash; 2018</div>
+        <div class="timeline-title">White House &amp; Global Recognition</div>
+        <div class="timeline-desc">Invited by successive administrations to advocate for women-owned businesses. Named EY Entrepreneurial Winning Woman and IWEC Global Ambassador.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2021</div>
+        <div class="timeline-title">Acquired RunMyProcess from Fujitsu</div>
+        <div class="timeline-desc">Expanded into enterprise technology — acquiring a cloud-native, low-code automation platform and repositioning as a tech CEO.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2024</div>
+        <div class="timeline-title">Exited Akorbi</div>
+        <div class="timeline-desc">After 22 years, Akorbi was acquired by Propio Language Services — one of the most successful Latina-founded exits in the language industry.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Today</div>
+        <div class="timeline-title">CEO, Investor &amp; Inventor</div>
+        <div class="timeline-desc">Leads RunMyProcess and Mirza Holdings. Multiple patents pending. Board member across global organizations championing women and innovation.</div>
       </div>
     </div>
   </div>
@@ -1340,47 +1694,110 @@ footer {
   <div class="marquee-track" id="marquee">
     <span class="marquee-item">TIME</span>
     <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Forbes</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Fortune</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Bloomberg TV</span>
+    <span class="marquee-dot">◆</span>
     <span class="marquee-item">MSNBC</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">Entrepreneur</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Fortune</span>
-    <span class="marquee-dot">◆</span>
     <span class="marquee-item">Inc. 5000</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Dallas Innovates</span>
+    <span class="marquee-item">D CEO</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Hola!</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">Dallas Business Journal</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Authority Magazine</span>
+    <span class="marquee-item">Univision</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Global Innovation Forum</span>
+    <span class="marquee-item">Telemundo</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">WBENC</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Dallas Innovates</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Authority Magazine</span>
     <span class="marquee-dot">◆</span>
     <!-- Duplicate for seamless loop -->
     <span class="marquee-item">TIME</span>
     <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Forbes</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Fortune</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Bloomberg TV</span>
+    <span class="marquee-dot">◆</span>
     <span class="marquee-item">MSNBC</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">Entrepreneur</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Fortune</span>
-    <span class="marquee-dot">◆</span>
     <span class="marquee-item">Inc. 5000</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Dallas Innovates</span>
+    <span class="marquee-item">D CEO</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Hola!</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">Dallas Business Journal</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Authority Magazine</span>
+    <span class="marquee-item">Univision</span>
     <span class="marquee-dot">◆</span>
-    <span class="marquee-item">Global Innovation Forum</span>
+    <span class="marquee-item">Telemundo</span>
     <span class="marquee-dot">◆</span>
     <span class="marquee-item">WBENC</span>
     <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Dallas Innovates</span>
+    <span class="marquee-dot">◆</span>
+    <span class="marquee-item">Authority Magazine</span>
+    <span class="marquee-dot">◆</span>
   </div>
 </div>
+
+<!-- ═══════════════ VENTURES ═══════════════ -->
+<section class="ventures-section" id="ventures">
+  <div class="section">
+    <div class="reveal">
+      <p class="section-label">Ventures</p>
+      <h2 class="section-title">Built, Acquired<br>&amp; <em>Exited</em></h2>
+    </div>
+    <div class="ventures-grid">
+      <div class="venture-card reveal reveal-delay-1">
+        <span class="venture-status exited">Exited 2024</span>
+        <div class="venture-name">Akorbi</div>
+        <div class="venture-role">Founder &amp; CEO (2002 &ndash; 2024)</div>
+        <div class="venture-desc">Global language services, interpretation, localization, multilingual staffing, and 911 emergency interpretation. Acquired by Propio Language Services.</div>
+        <div class="venture-meta">
+          <div class="venture-meta-item">Revenue<span class="venture-meta-value">$55M</span></div>
+          <div class="venture-meta-item">Employees<span class="venture-meta-value">700+</span></div>
+          <div class="venture-meta-item">Countries<span class="venture-meta-value">12</span></div>
+        </div>
+      </div>
+      <div class="venture-card reveal reveal-delay-2">
+        <span class="venture-status active">Active</span>
+        <div class="venture-name">RunMyProcess</div>
+        <div class="venture-role">CEO (Acquired from Fujitsu, 2021)</div>
+        <div class="venture-desc">Cloud-native, low-code process automation platform. Enterprise SaaS that lets organizations integrate, automate, and co-create custom mobile-ready applications.</div>
+        <div class="venture-meta">
+          <div class="venture-meta-item">Type<span class="venture-meta-value">SaaS</span></div>
+          <div class="venture-meta-item">Focus<span class="venture-meta-value">Automation</span></div>
+        </div>
+      </div>
+      <div class="venture-card reveal reveal-delay-3">
+        <span class="venture-status active">Active</span>
+        <div class="venture-name">Mirza Holdings</div>
+        <div class="venture-role">Managing Member</div>
+        <div class="venture-desc">Private investment and operating company. Strategic investments at the intersection of language, technology, and human connection.</div>
+        <div class="venture-meta">
+          <div class="venture-meta-item">Type<span class="venture-meta-value">Holding Co.</span></div>
+          <div class="venture-meta-item">Focus<span class="venture-meta-value">Tech &amp; Services</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══════════════ PUBLICATIONS ═══════════════ -->
 <section class="publications-section" id="publications">
@@ -1443,12 +1860,12 @@ footer {
         <div class="divider reveal reveal-delay-2"></div>
         <p class="section-desc reveal reveal-delay-2">From Fortune 500 boardrooms to international summits, Claudia delivers candid, hard-won insights on building companies, embracing AI, and creating cultures where everyone has a seat at the table.</p>
         <div class="speaking-topics reveal reveal-delay-3">
-          <span class="topic-tag">AI &amp; Innovation</span>
-          <span class="topic-tag">Female Entrepreneurship</span>
-          <span class="topic-tag">Diversity &amp; Inclusion</span>
-          <span class="topic-tag">Immigration &amp; Business</span>
-          <span class="topic-tag">Corporate Culture</span>
-          <span class="topic-tag">Global Growth</span>
+          <span class="topic-tag">AI Bias &amp; Regulation</span>
+          <span class="topic-tag">Building Global Companies</span>
+          <span class="topic-tag">The Immigrant Founder's Edge</span>
+          <span class="topic-tag">Women's Economic Empowerment</span>
+          <span class="topic-tag">Leading Through Uncertainty</span>
+          <span class="topic-tag">Corporate Culture Transformation</span>
         </div>
         <a href="#contact" class="btn-gold reveal reveal-delay-4">Book Claudia</a>
       </div>
@@ -1468,59 +1885,69 @@ footer {
   </div>
 </section>
 
-<!-- ═══════════════ PROGRAMS ═══════════════ -->
-<section class="programs-section" id="programs">
+<!-- ═══════════════ LEADERSHIP ═══════════════ -->
+<section class="leadership-section" id="leadership">
   <div class="section">
     <div class="reveal">
-      <p class="section-label">Programs</p>
-      <h2 class="section-title">Lead Smarter,<br><em>Grow</em> With Purpose</h2>
+      <p class="section-label">Leadership</p>
+      <h2 class="section-title">Boards, Advocacy<br>&amp; <em>Global</em> Influence</h2>
     </div>
-    <div class="programs-grid">
-      <div class="program-card reveal reveal-delay-1">
-        <div class="program-card-image">
-          <img src="https://static.wixstatic.com/media/84770f_c8b8ea0f49cf490ca6dfb45374a7518c~mv2.jpg/v1/fit/w_800,h_600,al_c,q_90/file.webp" alt="Corporate in the Digital Era" loading="lazy">
-          <span class="program-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            14 Days
-          </span>
-        </div>
-        <div class="program-body">
-          <h3 class="program-title">Corporate in the Digital Era</h3>
-          <div class="program-price">$80</div>
-          <a href="#" class="program-cta">View Details <svg width="10" height="8" viewBox="0 0 16 12" fill="none"><path d="M10 0L8.6 1.4L12.2 5H0V7H12.2L8.6 10.6L10 12L16 6L10 0Z" fill="currentColor"/></svg></a>
-        </div>
+    <div class="leadership-grid">
+      <div class="board-card reveal reveal-delay-1">
+        <div class="board-org">Women Presidents' Organization</div>
+        <div class="board-role">Board of Directors</div>
+        <div class="board-desc">Peer advisory for women who own multimillion-dollar companies.</div>
       </div>
-      <div class="program-card reveal reveal-delay-2">
-        <div class="program-card-image">
-          <img src="https://static.wixstatic.com/media/11062b_7c09b4a1740345a595e374822d08ef5d~mv2.jpeg/v1/fit/w_800,h_600,al_c,q_90/file.webp" alt="Being a Better Manager" loading="lazy">
-          <span class="program-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            28 Days
-          </span>
-        </div>
-        <div class="program-body">
-          <h3 class="program-title">Being a Better Manager</h3>
-          <div class="program-price">$120</div>
-          <a href="#" class="program-cta">View Details <svg width="10" height="8" viewBox="0 0 16 12" fill="none"><path d="M10 0L8.6 1.4L12.2 5H0V7H12.2L8.6 10.6L10 12L16 6L10 0Z" fill="currentColor"/></svg></a>
-        </div>
+      <div class="board-card reveal reveal-delay-1">
+        <div class="board-org">WPO Foundation (FWPO)</div>
+        <div class="board-role">Secretary / Treasurer</div>
+        <div class="board-desc">501(c)(3) advancing women entrepreneurs worldwide.</div>
       </div>
-      <div class="program-card reveal reveal-delay-3">
-        <div class="program-card-image">
-          <img src="https://static.wixstatic.com/media/1ca2144072994fb2a1fa6c973a122075.jpg/v1/fit/w_800,h_600,al_c,q_90/file.webp" alt="Workplace Motivation" loading="lazy">
-          <span class="program-duration">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            56 Days
-          </span>
-        </div>
-        <div class="program-body">
-          <h3 class="program-title">Workplace Motivation</h3>
-          <div class="program-price">$150</div>
-          <a href="#" class="program-cta">View Details <svg width="10" height="8" viewBox="0 0 16 12" fill="none"><path d="M10 0L8.6 1.4L12.2 5H0V7H12.2L8.6 10.6L10 12L16 6L10 0Z" fill="currentColor"/></svg></a>
-        </div>
+      <div class="board-card reveal reveal-delay-2">
+        <div class="board-org">SheIs Foundation</div>
+        <div class="board-role">Board Member</div>
+        <div class="board-desc">Transforming the lives of women and girls across Latin America.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-2">
+        <div class="board-org">US Hispanic Business Council</div>
+        <div class="board-role">Board Member</div>
+        <div class="board-desc">Advocating for Hispanic business interests at the national level.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-3">
+        <div class="board-org">Young Presidents' Organization</div>
+        <div class="board-role">Member (YPO)</div>
+        <div class="board-desc">Global leadership community of chief executives.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-3">
+        <div class="board-org">IWEC Foundation</div>
+        <div class="board-role">Global Ambassador (2018 Awardee)</div>
+        <div class="board-desc">International Women's Entrepreneurial Challenge — championing women-led businesses globally.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-4">
+        <div class="board-org">Women Economic Forum</div>
+        <div class="board-role">Member</div>
+        <div class="board-desc">Global platform for women's economic empowerment.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-4">
+        <div class="board-org">WICCI India</div>
+        <div class="board-role">Member</div>
+        <div class="board-desc">Women's Indian Chamber of Commerce and Industry.</div>
+      </div>
+      <div class="board-card reveal reveal-delay-4">
+        <div class="board-org">International Women Foundation</div>
+        <div class="board-role">Member</div>
+        <div class="board-desc">Supporting women's leadership and opportunity across borders.</div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ═══════════════ PHILANTHROPY ═══════════════ -->
+<div class="philanthropy-strip">
+  <p class="section-label reveal">Beyond Business</p>
+  <h2 class="section-title reveal reveal-delay-1">Giving Back Is<br><em>Not Optional</em></h2>
+  <p class="section-desc reveal reveal-delay-2">During COVID-19, Claudia and a coalition of women business owners spent weeks repatriating Colombian children, women, and elders stranded in inhumane conditions at S&atilde;o Paulo's airport. At home in Dallas, her team supports the Genesis Women's Shelter and programs for children who are hard of hearing.</p>
+</div>
 
 <!-- ═══════════════ AWARDS ═══════════════ -->
 <section class="awards-section" id="awards">
@@ -1529,12 +1956,44 @@ footer {
     <h2 class="section-title reveal reveal-delay-1">A Legacy of<br><em>Awards &amp; Accolades</em></h2>
     <div class="awards-scroll reveal reveal-delay-2">
       <div class="award-card">
+        <div class="award-title">2024 Latina of Influence</div>
+        <div class="award-issuer">Hispanic Lifestyle</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">Top 100 Latina Powerhouse</div>
+        <div class="award-issuer">Hola! Magazine, 2020</div>
+      </div>
+      <div class="award-card">
         <div class="award-title">US Hispanic Business Woman of the Year</div>
         <div class="award-issuer">United States Hispanic Chamber of Commerce</div>
       </div>
       <div class="award-card">
         <div class="award-title">EY Entrepreneurial Winning Women</div>
         <div class="award-issuer">Ernst & Young, 2015</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">IWEC Global Ambassador</div>
+        <div class="award-issuer">IWEC Foundation, 2018</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">WBENC Women's Business Enterprise Star</div>
+        <div class="award-issuer">WBENC, 2018</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">Google Outstanding Partnership</div>
+        <div class="award-issuer">Google, 2019</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">Inc. 5000 Regional Texas</div>
+        <div class="award-issuer">Inc. Magazine, 2021</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">Most Influential Latinas</div>
+        <div class="award-issuer">Hispanic Executive & Hola! Magazine</div>
+      </div>
+      <div class="award-card">
+        <div class="award-title">Fastest-Growing LSP Globally</div>
+        <div class="award-issuer">CSA Research / Nimdzi / Slator Rankings</div>
       </div>
       <div class="award-card">
         <div class="award-title">Enterprising Women of the Year</div>
@@ -1561,16 +2020,12 @@ footer {
         <div class="award-issuer">Latina Style Magazine</div>
       </div>
       <div class="award-card">
-        <div class="award-title">Women Presidents Organization President's Award</div>
+        <div class="award-title">WPO President's Award</div>
         <div class="award-issuer">Women Presidents Organization</div>
       </div>
       <div class="award-card">
         <div class="award-title">Quality & Excellence Empire Builder</div>
         <div class="award-issuer">Greater Dallas Hispanic Chamber of Commerce</div>
-      </div>
-      <div class="award-card">
-        <div class="award-title">Google Outstanding Partnership</div>
-        <div class="award-issuer">Google</div>
       </div>
       <div class="award-card">
         <div class="award-title">Dallas 100 Fastest-Growing</div>
@@ -1635,8 +2090,9 @@ footer {
   <span class="footer-copy">&copy; 2026 Claudia Mirza. All rights reserved.</span>
   <div class="footer-links">
     <a href="#about">About</a>
-    <a href="#publications">Publications</a>
+    <a href="#ventures">Ventures</a>
     <a href="#speaking">Speaking</a>
+    <a href="#leadership">Leadership</a>
     <a href="#contact">Contact</a>
   </div>
 </footer>
@@ -1679,6 +2135,9 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
 
 reveals.forEach(el => revealObserver.observe(el));
+
+// Timeline items use same observer
+document.querySelectorAll('.timeline-item').forEach(el => revealObserver.observe(el));
 
 // ═══════════════ VIDEO PLAYER ═══════════════
 function playVideo() {
