@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://claudia-mirza-bgfmg.ondigitalocean.app/sitemap.xml

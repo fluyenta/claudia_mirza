@@ -3,7 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Claudia Mirza — Investor, Entrepreneur, Author & Speaker</title>
+<title>Claudia Mirza — Investor, Entrepreneur &amp; Speaker</title>
+<meta name="description" content="Claudia Mirza built Akorbi into a $55M global enterprise, acquired RunMyProcess from Fujitsu, and exited after 22 years. Keynote speaker, strategic advisor, and investor based in Dallas, TX.">
+<meta name="author" content="Claudia Mirza">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claudia Mirza — Investor, Entrepreneur & Speaker">
+<meta property="og:description" content="From Colombia to a $55M global enterprise. Keynote speaker, strategic advisor, and investor. Founder of Akorbi. CEO of RunMyProcess.">
+<meta property="og:image" content="https://static.wixstatic.com/media/f433fc_a51696e1722c4ca3b7703db0c1433106~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85/f433fc_a51696e1722c4ca3b7703db0c1433106~mv2.jpg">
+<meta property="og:url" content="https://claudia-mirza-bgfmg.ondigitalocean.app">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@claudiapmirza">
+<meta name="twitter:title" content="Claudia Mirza — Investor, Entrepreneur & Speaker">
+<meta name="twitter:description" content="From Colombia to a $55M global enterprise. Keynote speaker, strategic advisor, and investor.">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/f433fc_a51696e1722c4ca3b7703db0c1433106~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85/f433fc_a51696e1722c4ca3b7703db0c1433106~mv2.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%230A0A0A'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='400' fill='%23C9A84C' text-anchor='middle'%3ECM%3C/text%3E%3C/svg%3E">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Claudia Mirza",
+  "jobTitle": "CEO",
+  "worksFor": [
+    { "@type": "Organization", "name": "RunMyProcess" },
+    { "@type": "Organization", "name": "Mirza Holdings LLC" }
+  ],
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Harvard Business School" },
+    { "@type": "CollegeOrUniversity", "name": "Tuck School of Business at Dartmouth" },
+    { "@type": "CollegeOrUniversity", "name": "SMU Cox School of Business" },
+    { "@type": "CollegeOrUniversity", "name": "DeVry University" }
+  ],
+  "knowsAbout": ["AI Transformation", "Global Business", "Language Services", "Women Entrepreneurship", "Diversity & Inclusion"],
+  "sameAs": [
+    "https://www.linkedin.com/in/claudia-vargas-mirza-6004831/",
+    "https://www.instagram.com/cmirzacorp/",
+    "https://x.com/claudiapmirza"
+  ],
+  "url": "https://claudia-mirza-bgfmg.ondigitalocean.app",
+  "description": "Investor, entrepreneur, and keynote speaker. Built Akorbi into a $55M global enterprise. CEO of RunMyProcess. Harvard Business School OPM alumna."
+}
+</script>
+
+<!-- Google Analytics (replace G-XXXXXXXXXX with your Measurement ID) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -1162,6 +1215,51 @@ footer {
 
 .footer-links a:hover { color: var(--gold); }
 
+/* ═══════════════ PAGE LOADER ═══════════════ */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  letter-spacing: 0.1em;
+  opacity: 0;
+  animation: loaderFade 1.2s 0.2s forwards;
+}
+
+.loader-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1rem auto 0;
+  transform: scaleX(0);
+  animation: loaderLine 0.8s 0.5s forwards;
+}
+
+@keyframes loaderFade {
+  to { opacity: 1; }
+}
+
+@keyframes loaderLine {
+  to { transform: scaleX(1); }
+}
+
 /* ═══════════════ ANIMATIONS ═══════════════ */
 @keyframes fadeUp {
   to { opacity: 1; transform: translateY(0); }
@@ -1485,6 +1583,69 @@ footer {
   margin-top: 0.2rem;
 }
 
+/* ═══════════════ QUOTES ═══════════════ */
+.quotes-section {
+  background: var(--cream);
+  padding: 8rem 0;
+  overflow: hidden;
+}
+
+.quotes-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.quote-card {
+  background: var(--warm-white);
+  border-radius: 2px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+
+.quote-card::before {
+  content: '\201C';
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.3;
+  position: absolute;
+  top: 1rem;
+  left: 1.5rem;
+}
+
+.quote-text {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-dark);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.quote-source {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
 /* ═══════════════ ENGAGEMENTS ═══════════════ */
 .engagements-section { background: var(--cream); }
 
@@ -1607,11 +1768,94 @@ footer {
 .philanthropy-strip .section-title { color: var(--cream); margin-bottom: 1rem; max-width: 700px; margin-left: auto; margin-right: auto; }
 .philanthropy-strip .section-desc { color: var(--text-light); max-width: 650px; margin: 0 auto; }
 
+/* ═══════════════ PERSONAL SECTION ═══════════════ */
+.personal-section {
+  background: var(--warm-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.personal-image {
+  position: relative;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.personal-image img {
+  width: 100%;
+  display: block;
+  filter: sepia(0.15) contrast(1.05);
+  transition: transform 6s ease;
+}
+
+.personal-image:hover img { transform: scale(1.03); }
+
+.personal-image-border {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40%;
+  height: 40%;
+  border-right: 1px solid var(--gold);
+  border-top: 1px solid var(--gold);
+  opacity: 0.25;
+}
+
+.personal-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(201,168,76,0.12);
+}
+
+.personal-detail-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.personal-detail-icon svg { stroke: var(--gold-dark); }
+
+.personal-detail-text {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.personal-detail-text strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.2rem;
+}
+
+@media (max-width: 1024px) {
+  .personal-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+
 /* ═══════════════ NEW SECTIONS RESPONSIVE ═══════════════ */
 @media (max-width: 1024px) {
   .ventures-grid { grid-template-columns: 1fr 1fr; }
   .leadership-grid { grid-template-columns: 1fr 1fr; }
   .engagements-grid { grid-template-columns: 1fr 1fr; }
+  .quotes-grid { grid-template-columns: 1fr 1fr; }
+  .quotes-inner { padding: 0 2rem; }
   .timeline-inner { padding: 0 2rem; }
 }
 
@@ -1619,11 +1863,20 @@ footer {
   .ventures-grid { grid-template-columns: 1fr; }
   .leadership-grid { grid-template-columns: 1fr; }
   .engagements-grid { grid-template-columns: 1fr; }
+  .quotes-grid { grid-template-columns: 1fr; }
   .education-row { gap: 1.5rem; }
 }
 </style>
 </head>
 <body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+  <div>
+    <div class="loader-text">Claudia Mirza</div>
+    <div class="loader-line"></div>
+  </div>
+</div>
 
 <!-- Cursor Glow -->
 <div class="cursor-glow" id="cursorGlow"></div>
@@ -1661,7 +1914,7 @@ footer {
   <div class="hero-grain"></div>
   <div class="hero-content">
     <div class="hero-text">
-      <p class="hero-label">Investor · Entrepreneur · Author · Speaker</p>
+      <p class="hero-label">Investor · Entrepreneur · Speaker</p>
       <h1 class="hero-title">Building <em>Lasting</em><br>Value Across<br>Business &amp;<br>Borders</h1>
       <p class="hero-subtitle">Born in Colombia, forged in America. From translating at a horse racetrack to building a $55&nbsp;million enterprise — and lifting others every step of the way.</p>
       <a href="#about" class="hero-cta">
@@ -1983,14 +2236,24 @@ footer {
         <a href="#contact" class="btn-gold reveal reveal-delay-4">Book Claudia</a>
       </div>
       <div class="reveal reveal-delay-2">
-        <div class="video-wrapper" id="videoWrapper" onclick="playVideo()">
-          <img src="https://i.ytimg.com/vi/nWXI5FHzmeQ/maxresdefault.jpg" alt="An Immigrant Success Story" loading="lazy" id="videoThumb">
+        <div class="video-wrapper" id="videoWrapper1" onclick="playVideo('videoWrapper1','nWXI5FHzmeQ')">
+          <img src="https://i.ytimg.com/vi/nWXI5FHzmeQ/maxresdefault.jpg" alt="An Immigrant Success Story" loading="lazy">
           <div class="video-play-btn">
             <svg width="22" height="26" viewBox="0 0 22 26"><polygon points="2,0 22,13 2,26"/></svg>
           </div>
           <div class="video-caption">
             <div class="video-caption-title">An Immigrant Success Story</div>
-            <div class="video-caption-sub">Building a $55 Million Translation Business</div>
+            <div class="video-caption-sub">The Story Exchange</div>
+          </div>
+        </div>
+        <div class="video-wrapper" id="videoWrapper2" onclick="playVideo('videoWrapper2','7iIP4mD0M_0')" style="margin-top: 1.5rem;">
+          <img src="https://i.ytimg.com/vi/7iIP4mD0M_0/hqdefault.jpg" alt="The American Dream - Bloomberg TV" loading="lazy">
+          <div class="video-play-btn">
+            <svg width="22" height="26" viewBox="0 0 22 26"><polygon points="2,0 22,13 2,26"/></svg>
+          </div>
+          <div class="video-caption">
+            <div class="video-caption-title">The American Dream</div>
+            <div class="video-caption-sub">Bloomberg TV</div>
           </div>
         </div>
       </div>
@@ -2050,6 +2313,42 @@ footer {
         <div class="board-org">International Women Foundation</div>
         <div class="board-role">Member</div>
         <div class="board-desc">Supporting women's leadership and opportunity across borders.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ QUOTES ═══════════════ -->
+<section class="quotes-section">
+  <div class="quotes-inner">
+    <div class="reveal">
+      <p class="section-label">In Her Words</p>
+      <h2 class="section-title">What <em>Drives</em> Claudia</h2>
+    </div>
+    <div class="quotes-grid">
+      <div class="quote-card reveal reveal-delay-1">
+        <p class="quote-text">Being alone in absolute poverty gave me life skills for troubleshooting, creative thinking, and an appreciation of family.</p>
+        <span class="quote-source">Welum Magazine</span>
+      </div>
+      <div class="quote-card reveal reveal-delay-2">
+        <p class="quote-text">We really become very entrepreneurial because we have to survive.</p>
+        <span class="quote-source">D CEO Magazine</span>
+      </div>
+      <div class="quote-card reveal reveal-delay-3">
+        <p class="quote-text">Surround yourself with good people and be kind to them. This attracts more people and ultimately gets better results.</p>
+        <span class="quote-source">Welum Magazine</span>
+      </div>
+      <div class="quote-card reveal reveal-delay-1">
+        <p class="quote-text">I left Colombia very poor and being no one. I would like to go back and help women and little girls that have a dream to succeed.</p>
+        <span class="quote-source">The Story Exchange</span>
+      </div>
+      <div class="quote-card reveal reveal-delay-2">
+        <p class="quote-text">Be kind to people — it is sustainable. Making people angry is just not sustainable.</p>
+        <span class="quote-source">Welum Magazine</span>
+      </div>
+      <div class="quote-card reveal reveal-delay-3">
+        <p class="quote-text">I wanted to get it done right. It didn't matter how long it took because this was the beginning of something very special.</p>
+        <span class="quote-source">D CEO Magazine</span>
       </div>
     </div>
   </div>
@@ -2205,6 +2504,44 @@ footer {
   </div>
 </section>
 
+<!-- ═══════════════ BEYOND THE BOARDROOM ═══════════════ -->
+<section class="personal-section">
+  <div class="section">
+    <div class="personal-grid">
+      <div class="reveal">
+        <div class="personal-image">
+          <img src="https://assets.dmagstatic.com/wp-content/uploads/2024/05/Claudia-Mirza-sitting-on-horse-BW-VERT.jpg" alt="Young Claudia Mirza on horseback in Colombia" loading="lazy">
+          <div class="personal-image-border"></div>
+        </div>
+      </div>
+      <div>
+        <p class="section-label reveal">Beyond the Boardroom</p>
+        <h2 class="section-title reveal reveal-delay-1">Horses, Nature<br>&amp; a <em>Simple</em> Life</h2>
+        <div class="divider reveal reveal-delay-2"></div>
+        <p class="section-desc reveal reveal-delay-2">Behind the accolades and exits is a woman who describes herself as someone who enjoys a simple life — nature, birds singing, fresh air, family and friends.</p>
+        <div class="personal-detail reveal reveal-delay-3">
+          <div class="personal-detail-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <div class="personal-detail-text">
+            <strong>Paso Fino Champion</strong>
+            A natural rider since childhood in Colombia, Claudia won honors in Paso Fino Youth Championships and continues to ride, train, and compete with her horses across the country.
+          </div>
+        </div>
+        <div class="personal-detail reveal reveal-delay-4">
+          <div class="personal-detail-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="personal-detail-text">
+            <strong>Van Alstyne, Texas</strong>
+            Her farm north of Dallas is home to miniature donkeys Annabelle and Anacleta — rescued through the Association for Donkey &amp; Equine Haven — keeping alive her late father's love of animals.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ CONTACT ═══════════════ -->
 <section class="contact-section" id="contact">
   <div class="section">
@@ -2216,36 +2553,40 @@ footer {
         <p class="section-desc reveal reveal-delay-2">Looking for a keynote speaker who's lived the story, a strategic partner with real skin in the game, or someone who invests in communities — not just portfolios? Let's talk.</p>
         <a href="mailto:contact@runmyprocess.com" class="contact-email reveal reveal-delay-3">contact@runmyprocess.com</a>
         <div class="contact-socials reveal reveal-delay-4">
-          <a href="#" class="social-icon" aria-label="Facebook">
-            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" class="social-icon" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/claudia-vargas-mirza-6004831/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
             <svg width="18" height="18" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
           </a>
-          <a href="#" class="social-icon" aria-label="YouTube">
-            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg>
+          <a href="https://www.instagram.com/cmirzacorp/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </a>
+          <a href="https://x.com/claudiapmirza" target="_blank" rel="noopener" class="social-icon" aria-label="X / Twitter">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           </a>
         </div>
       </div>
       <div class="contact-form reveal reveal-delay-2">
-        <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent.');">
+        <form action="https://formsubmit.co/contact@runmyprocess.com" method="POST">
+          <input type="hidden" name="_subject" value="New inquiry from claudiamirza.com">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://claudia-mirza-bgfmg.ondigitalocean.app#contact">
+          <input type="text" name="_honey" style="display:none">
           <div class="form-row">
             <div class="form-group">
               <label class="form-label">First Name</label>
-              <input type="text" class="form-input" placeholder="Jane" required>
+              <input type="text" name="first_name" class="form-input" placeholder="Jane" required>
             </div>
             <div class="form-group">
               <label class="form-label">Last Name</label>
-              <input type="text" class="form-input" placeholder="Doe">
+              <input type="text" name="last_name" class="form-input" placeholder="Doe">
             </div>
           </div>
           <div class="form-group">
             <label class="form-label">Email</label>
-            <input type="email" class="form-input" placeholder="jane@company.com" required>
+            <input type="email" name="email" class="form-input" placeholder="jane@company.com" required>
           </div>
           <div class="form-group">
             <label class="form-label">Message</label>
-            <textarea class="form-input" placeholder="Tell me about your project or event..."></textarea>
+            <textarea name="message" class="form-input" placeholder="Tell me about your project or event..."></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
         </form>
@@ -2309,13 +2650,20 @@ reveals.forEach(el => revealObserver.observe(el));
 // Timeline items use same observer
 document.querySelectorAll('.timeline-item').forEach(el => revealObserver.observe(el));
 
+// ═══════════════ PAGE LOADER ═══════════════
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('pageLoader').classList.add('loaded');
+  }, 1200);
+});
+
 // ═══════════════ VIDEO PLAYER ═══════════════
-function playVideo() {
-  const wrapper = document.getElementById('videoWrapper');
+function playVideo(wrapperId, videoId) {
+  const wrapper = document.getElementById(wrapperId);
   wrapper.innerHTML = `
     <div class="video-iframe-wrapper">
-      <iframe src="https://www.youtube.com/embed/nWXI5FHzmeQ?autoplay=1&rel=0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>`;
 }
