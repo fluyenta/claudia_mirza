@@ -1485,6 +1485,117 @@ footer {
   margin-top: 0.2rem;
 }
 
+/* ═══════════════ ENGAGEMENTS ═══════════════ */
+.engagements-section { background: var(--cream); }
+
+.engagements-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.engagement-card {
+  background: var(--warm-white);
+  border-radius: 2px;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid transparent;
+}
+
+.engagement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+.engagement-card.featured {
+  background: var(--black);
+  border-color: rgba(201,168,76,0.2);
+}
+
+.engagement-card.featured .engagement-title,
+.engagement-card.featured .engagement-price { color: var(--cream); }
+.engagement-card.featured .engagement-desc { color: var(--text-light); }
+.engagement-card.featured .engagement-includes li { color: var(--text-light); }
+.engagement-card.featured .engagement-includes li::before { color: var(--gold); }
+.engagement-card.featured .engagement-icon svg { stroke: var(--gold); }
+.engagement-card.featured .engagement-cta {
+  background: var(--gold);
+  color: var(--black);
+}
+.engagement-card.featured .engagement-cta:hover { background: var(--gold-light); }
+
+.engagement-icon {
+  margin-bottom: 1.5rem;
+}
+
+.engagement-icon svg { stroke: var(--gold-dark); }
+
+.engagement-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.engagement-price {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--gold-dark);
+  margin-bottom: 1.2rem;
+}
+
+.engagement-desc {
+  font-size: 0.82rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.engagement-includes {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex: 1;
+}
+
+.engagement-includes li {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.engagement-includes li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.engagement-cta {
+  display: block;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--warm-white);
+  background: var(--black);
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.engagement-cta:hover { background: var(--charcoal); }
+
 /* ═══════════════ PHILANTHROPY STRIP ═══════════════ */
 .philanthropy-strip {
   background: var(--black);
@@ -1500,12 +1611,14 @@ footer {
 @media (max-width: 1024px) {
   .ventures-grid { grid-template-columns: 1fr 1fr; }
   .leadership-grid { grid-template-columns: 1fr 1fr; }
+  .engagements-grid { grid-template-columns: 1fr 1fr; }
   .timeline-inner { padding: 0 2rem; }
 }
 
 @media (max-width: 768px) {
   .ventures-grid { grid-template-columns: 1fr; }
   .leadership-grid { grid-template-columns: 1fr; }
+  .engagements-grid { grid-template-columns: 1fr; }
   .education-row { gap: 1.5rem; }
 }
 </style>
@@ -1937,6 +2050,63 @@ footer {
         <div class="board-org">International Women Foundation</div>
         <div class="board-role">Member</div>
         <div class="board-desc">Supporting women's leadership and opportunity across borders.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ENGAGEMENTS ═══════════════ -->
+<section class="engagements-section" id="engagements">
+  <div class="section">
+    <div class="reveal">
+      <p class="section-label">Engagements</p>
+      <h2 class="section-title">Bring Claudia's<br><em>Expertise</em> to Your Organization</h2>
+    </div>
+    <div class="engagements-grid">
+      <div class="engagement-card reveal reveal-delay-1">
+        <div class="engagement-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="engagement-title">Keynote Speaking</h3>
+        <div class="engagement-price">From $25,000</div>
+        <p class="engagement-desc">High-impact keynotes on AI transformation, immigrant entrepreneurship, and building global companies. Customized for corporate summits, industry conferences, and government forums.</p>
+        <ul class="engagement-includes">
+          <li>60&ndash;90 minute keynote</li>
+          <li>Pre-event strategy call</li>
+          <li>Audience Q&amp;A session</li>
+          <li>Post-event content rights</li>
+        </ul>
+        <a href="#contact" class="engagement-cta">Request Availability</a>
+      </div>
+      <div class="engagement-card featured reveal reveal-delay-2">
+        <div class="engagement-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="engagement-title">Strategic Advisory</h3>
+        <div class="engagement-price">By Engagement</div>
+        <p class="engagement-desc">Hands-on advisory for CEOs navigating global expansion, M&amp;A, diversity strategy, or enterprise technology transformation. Informed by 22 years of building, acquiring, and exiting companies.</p>
+        <ul class="engagement-includes">
+          <li>Quarterly strategy sessions</li>
+          <li>Board-level counsel</li>
+          <li>M&amp;A and exit advisory</li>
+          <li>Direct access via private channel</li>
+        </ul>
+        <a href="#contact" class="engagement-cta">Start a Conversation</a>
+      </div>
+      <div class="engagement-card reveal reveal-delay-3">
+        <div class="engagement-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="engagement-title">Investment &amp; Partnerships</h3>
+        <div class="engagement-price">By Invitation</div>
+        <p class="engagement-desc">Strategic investments and operating partnerships through Mirza Holdings. Focused on language technology, process automation, and businesses led by women and underrepresented founders.</p>
+        <ul class="engagement-includes">
+          <li>Equity or revenue-share structures</li>
+          <li>Operational involvement</li>
+          <li>Access to global network</li>
+          <li>Board participation available</li>
+        </ul>
+        <a href="#contact" class="engagement-cta">Submit a Proposal</a>
       </div>
     </div>
   </div>
